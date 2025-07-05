@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewbox="0 0 400 300">
+    <style>
+      <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oswald|Raleway|Roboto|Indie+Flower|Gamja+Flower');</style>
+
+      :root{
+            --primary : purple;
+            --secondary : gold;
+            --tertiary : orange;
+      }
+        .shorts{
+            fill: var(--primary);
+            
+        }
+        .collar{
+            fill:var(--secondary);
+        }
+        .neck{
+            fill:pink;
+        }
+
+        .stripe-primary{
+            stop-color:var(--primary);
+        }
+      
+        .stripe-secondary{
+            stop-color:var(--secondary);
+        }
+
+
+        .torso{
+           fill:url(#Gradient1);
+        }
+        
+        .sleeves{
+            fill:var(--primary);
+        }
+      
+      .name{
+        font-family:"Lato";
+        font-size:0.9em;
+        font-weight:bold;
+      }
+      
+      .number{
+        font-family:"Lato";
+        font-size:2em;
+        font-weight:bold;
+      }
+      
+    </style>
+	<defs>
+
+    <g id="left_sleeve"
+    transform="matrix(0.8706656,0,0,0.8706656,135.10515,10.372998)"
+      >
+      <path
+        d="m -126.35458,5.2081634 -28.07879,34.4191666 19.02112,16.7567 9.28412,-10.189886" />
+      <path
+        d="m -154.67456,39.600054 c 0,0 2.1616,16.492216 19.05411,16.892512" />
+    </g>
+   
+    <g transform="matrix(-0.8706656,0,0,0.8706656,-7.1991186,10.372998)"
+      id="right_sleeve">
+      <path
+        d="m -126.35458,5.2081634 -28.07879,34.4191666 19.02112,16.7567 9.28412,-10.189886" />
+      <path
+        d="m -154.67456,39.600054 c 0,0 2.1616,16.492216 19.05411,16.892512" />
+    </g>
+    <path
+       d="M 26.424981,120.29454 L 16.330781,157.95082 L 58.421981,169.24227 L 63.918081,153.5975 L 69.441381,169.24227 L 111.53255,157.95082 L 101.43825,120.29454 L 26.424981,120.29454 z "
+       id="shorts" />
+    <path
+      d="M 50.514581,5.4421976 L 50.514581,16.080648 L 64.499681,26.773518 L 78.647981,16.080648 L 78.778981,5.6694876 C 78.778981,5.6694876 73.233581,0.48144762 64.982481,0.43580762 C 54.709981,0.37897762 50.514581,5.4421976 50.514581,5.4421976 z "
+      id="neck" />
+    <path
+      d="M 50.514581,6.5910376 L 50.514581,17.229488 L 64.499681,27.922348 L 78.647981,17.229488 L 78.647981,6.5910376 L 68.009581,18.807568 L 61.475981,18.807568 L 50.514581,6.5910376 z "
+      id="collar" />   
+    <path
+      d="M 50.378581,5.8292076 C 37.169181,6.6178276 25.102081,14.916778 25.102081,14.916778 L 25.292481,119.99525 L 61.669981,119.99525 L 66.104981,119.99525 L 102.48245,119.99525 L 102.67285,14.916778 C 102.67285,14.916778 91.966151,6.6178276 78.756881,5.8292076 L 50.378581,5.8292076 z "
+      id="torso" />
+  
+    <clipPath id="torsoclip"><use href="#torso" /></clipPath>
+  
+    <!-- verticalstripes -->
+    <!--5 Stripes = Each pair is 1/5th of the width or x2="20% -->
+    <linearGradient id="Gradient-v" x1="0%" y1="0%" x2="20%" y2="00%">
+      <stop offset="0%"  class="stripe-secondary" />
+      <stop offset="25%" class="stripe-secondary" />
+      <stop offset="25%" class="stripe-primary" />
+      <stop offset="75%" class="stripe-primary" />
+      <stop offset="75%" class="stripe-secondary" />
+      <stop offset="100%" class="stripe-secondary" />
+    </linearGradient>
+    <linearGradient id="verticalstripes" xlink:href="#Gradient-v" spreadMethod="repeat" />
+    
+    <!-- horizontalstripes -->
+    <!--3 Stripes = Each pair is 1/3rd of the height y2="33.333%"-->
+    <linearGradient id="Gradient-h" x1="0%" y1="0%" x2="0%" y2="33.333%">
+    <stop offset="0%"  class="stripe-primary" />
+    <stop offset="50%" class="stripe-primary" />
+    <stop offset="50%" class="stripe-secondary" />
+    <stop offset="100%" class="stripe-secondary" />
+  </linearGradient>
+  <linearGradient id="horizontalstripes" xlink:href="#Gradient-h" spreadMethod="repeat" />
+    
+	</defs>
+  <g id="front" >
+    <text x="0" y="15" >Front</text>
+    <g transform="translate(0,20)">
+      <use href="#torso" fill="url(#verticalstripes)" />  
+      <use href="#neck" class="neck" />
+      <use href="#collar" class="collar" />
+      <use href="#left_sleeve" class="left_sleeve sleeves" />
+      <use href="#right_sleeve" class="right_sleeve sleeves" />
+      <use href="#shorts" class="shorts" />
+      <image href="https://cdn.glitch.global/23e75167-34bb-4b19-9508-037561816315/UTC-Hand.png?v=1655376061604" width="20" x="80" y="20"/>
+    </g>
+  </g>
+    
+  <g id="back" transform="translate(200,0)">
+    <text x="0" y="15" >Back</text>
+    <g transform="translate(0,20)">
+      <use href="#torso" fill="url(#verticalstripes)" />  
+      <use href="#neck" class="collar" />
+      <use href="#collar" class="collar" />
+      <use href="#left_sleeve" class="left_sleeve sleeves" />
+      <use href="#right_sleeve" class="right_sleeve sleeves" />
+      <use href="#shorts" class="shorts" />
+      
+      <text class="name" x="65" y="50" text-anchor="middle" >Player Name</text>
+      
+      <text class="number" x="65" y="75" text-anchor="middle" >10</text>
+    </g>
+  </g>
+</svg>
